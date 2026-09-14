@@ -1,0 +1,41 @@
+using System;
+
+namespace MethodDemoApp
+{
+    // Class containing our method
+    class MathOperations
+    {
+        // Method that takes two integers
+        public void ProcessNumbers(int number1, int number2)
+        {
+            // Math operation on first number
+            int result = number1 * number1;
+
+            // Display result of math operation
+            Console.WriteLine("The square of the first number is: " + result);
+
+            // Display second number
+            Console.WriteLine("The second number is: " + number2);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create object of MathOperations class
+            MathOperations mathOps = new MathOperations();
+
+            // Call method using positional arguments
+            mathOps.ProcessNumbers(5, 10);
+
+            // Call method using named arguments
+            mathOps.ProcessNumbers(number1: 7, number2: 20);
+
+            // Keep console open
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+        }
+    }
+}
+
